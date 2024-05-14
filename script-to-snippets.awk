@@ -9,9 +9,9 @@ BEGIN {
 function next_snippet_file(){
   snippet_counter++
   snippet_file="build/script-snippet-" snippet_counter ".txt"
+  snippet_slide_file="build/script-snippet-" snippet_counter "-slide"
   printf("") > snippet_file
-
-  system("ln --force --relative --symbolic -- 'build/slide-" slide ".png' 'build/script-snippet-" snippet_counter "-slide.png'")
+  printf("slide-" slide ".png") > snippet_slide_file
 }
 
 "---" == $1 && "---" == $3 {

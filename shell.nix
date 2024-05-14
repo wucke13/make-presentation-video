@@ -5,7 +5,7 @@ pkgs.mkShellNoCC {
     gawk # text parsing
     ffmpeg-full # handles audio/video encoding
     findutils # finds files
-    ghostscript # renders pdf to png
+    mupdf # to conver PDF to PNG
     tts # text to speech engine
     gnumake # make flavour
   ];

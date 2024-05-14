@@ -40,5 +40,4 @@ There we go. The end.
 
 # Resources
 
-- []
-- [Concatenating images to a video in ffmpeg](https://trac.ffmpeg.org/wiki/Concatenate)
+- [The concatenate format in ffmpeg](https://ffmpeg.org/ffmpeg-formats.html#concat-1)
