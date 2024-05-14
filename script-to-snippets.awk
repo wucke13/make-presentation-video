@@ -15,7 +15,11 @@ function next_snippet_file(){
 }
 
 "---" == $1 && "---" == $3 {
-  if ($2 ~/^slide=([0-9])+$/) slide = substr($2, 7) + 0
+  if ($2 ~/^slide=-?([0-9])+$/) slide = substr($2, 7) + 0
+  if ($2 ~/^slide\+=-?([0-9])+$/) slide += substr($2, 8) + 0
+  if ($2 ~/^slide\+\+$/) slide++
+  if ($2 ~/^slide-=-?([0-9])+$/) slide -= substr($2, 8) + 0
+  if ($2 ~/^slide--$/) slide--
   next_snippet_file()
 
   # skipt this line
