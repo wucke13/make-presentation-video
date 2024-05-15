@@ -28,7 +28,7 @@ The script is expected to be in the following format:
 
 I got something to say about this slide, uhm. Its great! Yeah, uhm. Thats it.
 
---- slide=2 ---
+--- slide++ ---
 
 More greatness! Ah no, forgot.
 There was something important on the first slide, let's quickly jump back.
@@ -37,6 +37,23 @@ There was something important on the first slide, let's quickly jump back.
 
 There we go. The end.
 ```
+
+# Reference
+
+## Snippet separator
+
+The snippet separator must be a line conforming to the `<snippet_separator>` non-terminal of the following [EBNF](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form):
+
+```
+<snippet_separator> ::= <fix> " slide" <op> " " <fix>
+<fix> ::= "---"
+<int> ::= "-"? [0-9]+
+<infix_op> ::= ("=" | "+=" | "-=")
+<unary_op> ::= "++" | "--"
+<op> ::= <unary_op> | (<infix_op> <int>)
+```
+
+During the talking of a snippet, the current slide page `slide` will be shown.
 
 # Resources
 
