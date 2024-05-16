@@ -1,0 +1,23 @@
+--- slide=1 ---
+
+Here's a 5-slide deck that's full of buzzwords and designed to be completely unhelpful:
+
+--- slide++ ---
+
+This introductory slide sets the tone for our presentation, promising "transforming" results through innovative disruption. It's a vague and exciting-sounding title that doesn't actually give away what we're going to talk about. We're all about agility, vision, and strategy (but don't worry if you can't quite grasp what any of those words mean).
+
+--- slide++ ---
+
+We're faced with a pressing problem: the status quo is killing us! Silos, inertia, and resistance to change are holding us back. It's not entirely clear what we're trying to solve or how these problems relate to our solution, but rest assured that it will all make sense (or not) once you hear our presentation.
+
+--- slide++ ---
+
+Introducing the "Blue Ocean" approach! We're not quite sure what this means yet, but it sounds exciting. This slide promises digital transformation, data-driven decision making, and process optimization using a mix of Lean principles and some other stuff that might or might not work. Don't worry if you don't understand what any of these terms mean – we'll get to those later.
+
+--- slide++ ---
+
+Our revolutionary approach will bring numerous benefits! We're promised increased agility (whatever that means), improved customer satisfaction, and enhanced innovation (with a 50/50 chance of success). And who knows, maybe our patented "journey mapping" technique will actually work. It's all very exciting!
+
+--- slide++ ---
+
+Join the movement! This final slide invites you to be part of something special – but what that is, exactly, we're not quite sure. We'll leave you with a sense of excitement and anticipation for the future (and maybe a link to our company blog).

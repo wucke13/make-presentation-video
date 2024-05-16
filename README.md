@@ -38,6 +38,12 @@ There was something important on the first slide, let's quickly jump back.
 There we go. The end.
 ```
 
+# An example, quick!
+
+Worry not, here is an example from the [demo slides](demo):
+
+https://github.com/wucke13/make-presentation-video/assets/20400405/dd968f9c-c78d-4e37-a816-d2ea0286dc3c
+
 # Reference
 
 ## Snippet separator
@@ -54,6 +60,12 @@ The snippet separator must be a line conforming to the `<snippet_separator>` non
 ```
 
 During the talking of a snippet, the current slide page `slide` will be shown.
+
+## Regenerate the demo slides.pdf from slides.md
+
+```bash
+nix shell nixpkgs#pandoc nixpkgs#texlive.combined.scheme-full --command pandoc -t beamer demo/slides.md -o demo/slides.pdf
+```
 
 # Resources
 
