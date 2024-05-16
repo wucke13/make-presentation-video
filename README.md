@@ -15,8 +15,8 @@ Provided with this input, roughly the following happens:
 
 1. The script is split into text snippets
 2. The PDF is rendered to PNG images
-3. Each snippet is (sym-)linked to its corresponding page in the slides
-4. Each snippet is spoken by tts into an audio file
+3. Each snippet is ~~(sym-)linked~~ annotated with its corresponding page in the slides
+4. Each snippet is spoken by [tts](https://github.com/coqui-ai/TTS) into an audio file
 5. All audio files are concatenated into one audio file
 6. The PNGs are concatenated into one video
 7. The final video is assembled from the outputs of step 5. and step 6.
@@ -50,7 +50,7 @@ https://github.com/wucke13/make-presentation-video/assets/20400405/dd968f9c-c78d
 
 The snippet separator must be a line conforming to the `<snippet_separator>` non-terminal of the following [EBNF](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form):
 
-```
+```ebnf
 <snippet_separator> ::= <fix> " slide" <op> " " <fix>
 <fix> ::= "---"
 <int> ::= "-"? [0-9]+
