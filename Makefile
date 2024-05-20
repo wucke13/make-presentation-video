@@ -16,20 +16,20 @@ FFMPEG_AUDIO_FLAGS ?=
 FFMPEG_VIDEO_FLAGS ?= -pix_fmt yuv420p -filter:v fps=5 -movflags +faststart
 
 # Internal build logics
-SCRIPT_TEXT_SNIPPETS  := $(shell scripts/enumerate-snippets.awk $(SCRIPT))
+NUMBER_OF_SNIPPETS    := $(shell scripts/count-text-snippets.awk $(SCRIPT))
+SCRIPT_TEXT_SNIPPETS  := $(shell seq --format 'build/script-snippet-%g.txt' 1 $(NUMBER_OF_SNIPPETS))
 SCRIPT_AUDIO_SNIPPETS := $(SCRIPT_TEXT_SNIPPETS:.txt=.wav)
 FFMPEG_FLAGS          := -y $(FFMPEG_EXTRA_FLAGS)
 
 NUMBER_OF_PAGES       := $(shell $(MUTOOL) show $(PDF) trailer/Root/Pages/Count)
 PNGS                  := $(shell seq --format 'build/slide-%g.png' 1 $(NUMBER_OF_PAGES))
 
+# disable builtin rules
+MAKEFLAGS             += --no-builtin-rules
 
 # declare which rules do not actualy create an artifact
 .PHONY: all clean
 
-
-# remove internal built-in rules
-.SUFFIXES:
 
 all: build/output.mp4
 	@echo "done, final output is"
