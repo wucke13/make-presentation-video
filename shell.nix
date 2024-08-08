@@ -1,5 +1,7 @@
-{ pkgs ? import <nixpkgs> { config.allowUnfree = true; } }:
-
+let
+  nixpkgs = fetchTarball "https://github.com/NixOS/nixpkgs/tarball/95d1b593aab60766964d22d8ec0b0847678bdee2";
+  pkgs = import nixpkgs { config = { allowUnfree = true; }; overlays = [ ]; };
+in
 pkgs.mkShellNoCC {
   nativeBuildInputs = with pkgs; [
     espeak-ng # run-time dependency of tts
